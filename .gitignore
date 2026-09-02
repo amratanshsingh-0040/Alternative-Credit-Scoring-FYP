@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Node.js dependencies & builds
+node_modules/
+dist/
+build/
+.npm/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+
+# Large datasets and models
+*.csv
+*.zip
+*.parquet
+*.pkl
+*.joblib
+ml-service/data/raw/*.csv
+ml-service/models/*.pkl
+ml-service/models/*.joblib
