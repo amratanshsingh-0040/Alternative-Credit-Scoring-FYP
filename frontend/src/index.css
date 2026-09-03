@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-navy-900 text-white;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  * {
+    @apply border-navy-700;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-navy-800;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-navy-500 rounded-full;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-navy-800 border border-navy-600 rounded-2xl p-6;
+  }
+  
+  .btn-primary {
+    @apply bg-emerald-500 hover:bg-emerald-600 text-white font-semibold px-6 py-3 rounded-xl 
+           transition-all duration-200 shadow-lg hover:shadow-emerald-500/25 active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-navy-700 hover:bg-navy-600 text-white font-medium px-5 py-2.5 rounded-xl 
+           border border-navy-500 transition-all duration-200 active:scale-95;
+  }
+
+  .input-field {
+    @apply w-full bg-navy-900 border border-navy-500 rounded-xl px-4 py-3 text-white 
+           placeholder-gray-500 focus:outline-none focus:border-emerald-500 focus:ring-1 
+           focus:ring-emerald-500/50 transition-all duration-200 text-sm;
+  }
+
+  .label {
+    @apply text-xs font-medium text-gray-400 mb-1 block uppercase tracking-wider;
+  }
+
+  .badge-prime {
+    @apply bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-bold px-3 py-1 rounded-full;
+  }
+  .badge-near {
+    @apply bg-gold-400/20 text-gold-400 border border-gold-400/30 text-xs font-bold px-3 py-1 rounded-full;
+  }
+  .badge-sub {
+    @apply bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-bold px-3 py-1 rounded-full;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold text-white mb-1;
+  }
+  .section-subtitle {
+    @apply text-gray-400 text-sm mb-6;
+  }
+  
+  .stat-card {
+    @apply card text-center hover:border-emerald-500/50 transition-all duration-300;
+  }
+  
+  .nav-link {
+    @apply text-gray-300 hover:text-emerald-400 font-medium transition-colors duration-200 text-sm;
+  }
+  .nav-link.active {
+    @apply text-emerald-400;
+  }
+}
